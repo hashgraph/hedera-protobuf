@@ -31,6 +31,7 @@ import "Transaction.proto";
 
 /* Transactions and queries for the NFT Service */
 service NftService {
-    // Creates a new NFT by submitting the transaction
+    rpc mintNfts (Transaction) returns (TransactionResponse);
     rpc createNft (Transaction) returns (TransactionResponse);
+    rpc associateNfts (Transaction) returns (TransactionResponse);
 }
